@@ -1,7 +1,11 @@
-import './App.css';
+import React from 'react';
+import API from './API';
 
 function App() {
-  return null
+
+  return(
+  <API />
+  )
 }
 
 export default App;
