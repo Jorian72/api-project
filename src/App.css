@@ -1,0 +1,29 @@
+
+.root {
+  margin:0 auto;
+  height: 100%;
+  width:100%;
+}
+   
+  .image{
+    height: 300px;
+    width: 200px;
+  }
+  .grid-container{
+    display: grid;
+    column-gap: 50px;
+    width:100%;
+    padding:10px;
+  grid-template-columns: auto auto auto;
+
+  }
+  
+  ol{
+    margin:10%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5%;   
+  }
+
+  li{
+    list-style-type: none;
+  }
