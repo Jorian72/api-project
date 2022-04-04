@@ -1,12 +1,13 @@
 import React from 'react';
 import "./App.css";
 
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { item: [] };
   }
- 
+  
   componentDidMount() {
     //api call
     fetch("http://hp-api.herokuapp.com/api/characters")
@@ -14,9 +15,19 @@ export default class App extends React.Component {
       .then((resp) => this.setState({ item: resp }));
   }
   render() {
-
+    
     return (
+      <div className='nav'>
+      <ul>
+          <a>Gryffindor</a>
+          <a>Slytherin</a>
+          <a>Hufflepuf</a>
+          <a>Ravenclaw</a>
+            </ul>
+ 
       <div className='grid-container'>
+    
+
           {this.state.item.map((item) => (
            <ol key = { item.id } >
           <li> { item.name }</li>
@@ -28,8 +39,9 @@ export default class App extends React.Component {
              <li>Actor: {item.actor}</li>
              <img className='image' src={item.image}></img> 
              </ol>
+             
           ))}
-      </div>
+      </div> </div>
     );
   }
 }
