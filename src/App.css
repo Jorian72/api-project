@@ -37,25 +37,21 @@
   
  
 }
+ul{
+  
+  margin-left:25%;
+}
 
 a{
-
-  margin-top: 15px;
+  margin-bottom:-100px;
   margin-left: 60px;
   font-size: 19px;
   text-decoration: none;
   color: grey;
-  display: block;
+
 }
 
 .nav a:hover {
+  cursor: pointer;
   color: red;
-}
-
-
-ul a {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-
-  
 }

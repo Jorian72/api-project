@@ -1,5 +1,6 @@
 import React from 'react';
 import "./App.css";
+import characters from './views/characters';
 
 
 export default class App extends React.Component {
@@ -8,6 +9,13 @@ export default class App extends React.Component {
     this.state = { item: [] };
   }
   
+ 
+  houseFilter = house => () => {
+    console.log(house);
+    fetch(`http://hp-api.herokuapp.com/api/characters/house/${house}`)
+      .then((resp) => resp.json())
+      .then((resp) => this.setState({ item: resp }));
+  }
   componentDidMount() {
     //api call
     fetch("http://hp-api.herokuapp.com/api/characters")
@@ -19,10 +27,10 @@ export default class App extends React.Component {
     return (
       <div className='nav'>
       <ul>
-          <a>Gryffindor</a>
-          <a>Slytherin</a>
-          <a>Hufflepuf</a>
-          <a>Ravenclaw</a>
+          <a value="Gryffindor" onClick={this.houseFilter("Gryffindor")}>Gryffindor</a>
+          <a value="Slytherin" onClick={this.houseFilter("Slytherin")}>Slytherin</a>
+          <a value="Hufflepuff" onClick={this.houseFilter("Hufflepuff")}>Hufflepuff</a>
+          <a value="Ravenclaw" onClick={this.houseFilter("Ravenclaw")}>Ravenclaw</a>
             </ul>
  
       <div className='grid-container'>
@@ -40,8 +48,8 @@ export default class App extends React.Component {
              <img className='image' src={item.image}></img> 
              </ol>
              
-          ))}
-      </div> </div>
+          ))}</div>
+      </div> 
     );
   }
 }
