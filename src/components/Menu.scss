@@ -1,29 +1,31 @@
 
 aside {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: auto;
-    padding: 20px 6px;
-    background-color: gray;
-    color: white;
-  
-    nav {
-      margin-top: 80px;
-  
-      a {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 5px;
-        border-radius: 5px;
-        margin-bottom: 10px;
-  
-  
-        p {
-          display: none;
-        }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  padding: 20px 6px;
+  background-color: gray;
+  color: white;
+
+  nav {
+    margin-top: 80px;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 5px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+
+
+      p {
+        display: none;
       }
     }
-
   }
+
+}
+
+// als ik dit verwijder verandert er niks op jouw pagina? zou dit dan niet weg kunnen?
