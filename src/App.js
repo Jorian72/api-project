@@ -22,7 +22,7 @@ export default class App extends React.Component {
   render() {
     
     return (
-      
+      // op regel 28 tot 31 stel je hoogte enbreedte in het verschil is klein in dit geval maar als je beide instelt vervormt de afbeelding een beetje
       <div className='nav'>
       <ul>
           <a value="Gryffindor" onClick={this.houseFilter("Gryffindor")}><img src={require('.//images/Gryffindor.png')} alt='Gryffindor'width="100" height="100"/></a>
@@ -30,10 +30,8 @@ export default class App extends React.Component {
           <a value="Hufflepuff" onClick={this.houseFilter("Hufflepuff")}><img src={require('.//images/Hufflepuff.png')} alt='Hufflepuff' width="100" height="100"/></a>
           <a value="Ravenclaw" onClick={this.houseFilter("Ravenclaw")}><img src= {require('.//images/ravenclaw.png')}alt='Ravenclaw' width="100" height="100"/></a>
             </ul>
- 
       <div className='grid-container'>
-    
-
+  
           {this.state.item.map((item) => (
            <ol key = { item.id } >
              <img className='image' src={item.image}></img> 
