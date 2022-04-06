@@ -37,6 +37,7 @@ export default class App extends React.Component {
           {this.state.item.map((item) => (
            <ol key = { item.id } >
              <img className='image' src={item.image}></img> 
+             <div className='text'>
           <li> { item.name }</li>
            <li>Gender: {item.gender}</li> 
            <li>{item.house} </li>
@@ -44,7 +45,7 @@ export default class App extends React.Component {
           <li>{item.ancestry} </li>
             <li>Patronus: {item.patronus} </li>
              <li>Actor: {item.actor}</li>
-             
+             </div>
              </ol>
              
           ))}</div>
