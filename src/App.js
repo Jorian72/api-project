@@ -1,8 +1,5 @@
 import React from 'react';
 import "./App.css";
-import characters from './views/characters';
-
-
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -25,12 +22,13 @@ export default class App extends React.Component {
   render() {
     
     return (
+      
       <div className='nav'>
       <ul>
-          <a value="Gryffindor" onClick={this.houseFilter("Gryffindor")}>Gryffindor</a>
-          <a value="Slytherin" onClick={this.houseFilter("Slytherin")}>Slytherin</a>
-          <a value="Hufflepuff" onClick={this.houseFilter("Hufflepuff")}>Hufflepuff</a>
-          <a value="Ravenclaw" onClick={this.houseFilter("Ravenclaw")}>Ravenclaw</a>
+          <a value="Gryffindor" onClick={this.houseFilter("Gryffindor")}><img src={require('.//images/Gryffindor.png')} alt='Gryffindor'width="100" height="100"/></a>
+          <a value="Slytherin" onClick={this.houseFilter("Slytherin")}><img src={require('.//images/slytherin.png')} alt='Slytherin' width="100" height="100"/></a>
+          <a value="Hufflepuff" onClick={this.houseFilter("Hufflepuff")}><img src={require('.//images/Hufflepuff.png')} alt='Hufflepuff' width="100" height="100"/></a>
+          <a value="Ravenclaw" onClick={this.houseFilter("Ravenclaw")}><img src= {require('.//images/ravenclaw.png')}alt='Ravenclaw' width="100" height="100"/></a>
             </ul>
  
       <div className='grid-container'>
@@ -38,6 +36,7 @@ export default class App extends React.Component {
 
           {this.state.item.map((item) => (
            <ol key = { item.id } >
+             <img className='image' src={item.image}></img> 
           <li> { item.name }</li>
            <li>Gender: {item.gender}</li> 
            <li>{item.house} </li>
@@ -45,7 +44,7 @@ export default class App extends React.Component {
           <li>{item.ancestry} </li>
             <li>Patronus: {item.patronus} </li>
              <li>Actor: {item.actor}</li>
-             <img className='image' src={item.image}></img> 
+             
              </ol>
              
           ))}</div>

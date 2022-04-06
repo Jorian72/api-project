@@ -1,24 +1,33 @@
-
-.root {
+body{
   margin:0 auto;
   height: 100%;
   width:100%;
+  font-family: 'Harry Potter', sans-serif;
+  color:white;
+                                                
+ 
 }
-   
   .image{
+    margin-top:5%;
+    margin-left:10%;
     height: 300px;
     width: 200px;
   }
   .grid-container{
+    background-image:url('images/background.jpg');
+    background-size:100%;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
     display: grid;
     column-gap: 50px;
     width:100%;
-    padding:10px;
   grid-template-columns: auto auto auto;
 
   }
   
   ol{
+    
+    background-color: #006161;
     margin:10%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 5%;   
@@ -29,26 +38,26 @@
   }
   
 .nav {
+
   width: 100%;
-  height: 80px;
-  border-bottom: 1px solid lightgrey;
+  height: 100px;
   box-shadow: 0px 1px #888;
-  background: #f8f8ff;
+  background: #006161;
+
   
  
 }
 ul{
-  
-  margin-left:25%;
+  margin:0 auto;
+  margin-left:25%; 
+  margin-bottom:-5px;
 }
 
 a{
-  margin-bottom:-100px;
   margin-left: 60px;
   font-size: 19px;
   text-decoration: none;
   color: grey;
-
 }
 
 .nav a:hover {
