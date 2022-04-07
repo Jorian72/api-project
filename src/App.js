@@ -25,10 +25,26 @@ export default class App extends React.Component {
       
       <div className='nav'>
       <ul>
-          <a value="Gryffindor" onClick={this.houseFilter("Gryffindor")}><img src={require('.//images/Gryffindor.png')} alt='Gryffindor'width="100" height="100"/></a>
-          <a value="Slytherin" onClick={this.houseFilter("Slytherin")}><img src={require('.//images/slytherin.png')} alt='Slytherin' width="100" height="100"/></a>
-          <a value="Hufflepuff" onClick={this.houseFilter("Hufflepuff")}><img src={require('.//images/Hufflepuff.png')} alt='Hufflepuff' width="100" height="100"/></a>
-          <a value="Ravenclaw" onClick={this.houseFilter("Ravenclaw")}><img src= {require('.//images/ravenclaw.png')}alt='Ravenclaw' width="100" height="100"/></a>
+          <a value="Gryffindor" onClick={this.houseFilter("Gryffindor")}>
+            <img src={require('.//images/Gryffindor.png')} 
+            alt='Gryffindor'
+            width="100" height="100"/>
+            </a>
+          <a value="Slytherin" onClick={this.houseFilter("Slytherin")}>
+            <img src={require('.//images/slytherin.png')} 
+            alt='Slytherin' 
+            width="100" height="100"/>
+            </a>
+          <a value="Hufflepuff" onClick={this.houseFilter("Hufflepuff")}>
+            <img src={require('.//images/Hufflepuff.png')}
+            alt='Hufflepuff' 
+            width="100" height="100"/>
+            </a>
+          <a value="Ravenclaw" onClick={this.houseFilter("Ravenclaw")}>
+            <img src= {require('.//images/ravenclaw.png')}
+            alt='Ravenclaw' 
+            width="100" height="100"/>
+            </a>
             </ul>
  
       <div className='grid-container'>
